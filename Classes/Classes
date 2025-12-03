@@ -1,6 +1,5 @@
 class Pessoa{
     int PJ;
-    int PF;
 };
 
 
