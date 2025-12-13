@@ -2,19 +2,17 @@
 
 class Cliente{
     private:
-        std::string nome;
         int id;
+        std::string nome;
         int telefone;
-        int whatsapp;
     
     public:
-        Cliente(){} // Constructor Base
+        Cliente() = default; // Constructor Base
 
-        Cliente(std::string nome, int id, int telefone, int whatsapp){
-            this -> nome = nome;
+        Cliente(int id, std::string nome, int telefone){
             this -> id = id;
+            this -> nome = nome;
             this -> telefone = telefone;
-            this -> whatsapp = whatsapp;
         }
         
         std::string getNome(){
@@ -36,12 +34,5 @@ class Cliente{
         }
         void setTelefoneCliente(int telefone){
             this -> telefone = telefone;
-        }
-
-        int getWhatsappCliente(){
-            return whatsapp;
-        }
-        void setWhatsappCliente(int whatsapp){
-            this -> whatsapp = whatsapp;
         }
 };
