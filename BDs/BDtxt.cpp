@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "../Classes/Categoria.cpp"
+#include "../Classes/enum/Categoria.cpp"
 
 using namespace std;
 
