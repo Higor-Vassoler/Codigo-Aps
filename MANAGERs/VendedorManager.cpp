@@ -11,7 +11,7 @@ public:
     bool cadastrarVendedor(Vendedor vendedor) {
         VendedorDAO &dao = daoManager.getVendedorDAO();
         
-        if (dao.findById(vendedor.getIdVendedor()) != nullptr) {
+        if (dao.retrieve(vendedor.getIdVendedor()) != nullptr) {
             return false;
         }
 
@@ -23,7 +23,7 @@ public:
         VendedorDAO &dao = daoManager.getVendedorDAO();
 
         // só remove se existir
-        if (dao.findById(idVendedor) == nullptr) {
+        if (dao.retrieve(idVendedor) == nullptr) {
             return false;
         }
 
@@ -31,6 +31,6 @@ public:
     }
 
     Vendedor *buscarCliente(int idVendedor) {
-        return daoManager.getVendedorDAO().findById(idVendedor);
+        return daoManager.getVendedorDAO().retrieve(idVendedor);
     }
 };

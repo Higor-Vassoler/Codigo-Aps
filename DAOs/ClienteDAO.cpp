@@ -12,7 +12,7 @@ class ClienteDAO {
         }
 
         // READ
-        Cliente *findById(int id) {
+        Cliente *retrieve(int id) {
             for (auto &c : clientes) {
                 if (c.getIdCliente() == id) {
                     return &c;

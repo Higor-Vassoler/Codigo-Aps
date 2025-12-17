@@ -55,7 +55,7 @@ void opcoes(){
     int opcao = 0;
 
     std::cout << "Insira uma das opções abaixo:" << std::endl
-              << ">> [1] Opção" << std::endl
+              << ">> [1] Gerar Estatisticas de Vendas" << std::endl
               << ">> [2] Opção" << std::endl
               << ">> [3] Opção" << std::endl
               << ">> [4] Opção" << std::endl

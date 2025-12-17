@@ -12,7 +12,7 @@ class VendedorDAO {
         }
 
         // READ
-        Vendedor *findById(int id) {
+        Vendedor *retrieve(int id) {
             for (auto &v : vendedores) {
                 if (v.getIdVendedor() == id) {
                     return &v;

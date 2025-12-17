@@ -12,7 +12,7 @@ class ProdutoDAO {
         }
 
         // READ
-        Produto *findById(int idProduto) {
+        Produto *retrieve(int idProduto) {
             for (auto &p : produtos) {
                 if (p.getIdProduto() == idProduto) {
                     return &p;

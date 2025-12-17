@@ -11,7 +11,7 @@ public:
     bool cadastrarProduto(Produto produto) {
         ProdutoDAO &dao = daoManager.getProdutoDAO();
         
-        if (dao.findById(produto.getIdProduto()) != nullptr) {
+        if (dao.retrieve(produto.getIdProduto()) != nullptr) {
             return false;
         }
 
@@ -23,7 +23,7 @@ public:
         ClienteDAO &dao = daoManager.getClienteDAO();
 
         // só remove se existir
-        if (dao.findById(idProduto) == nullptr) {
+        if (dao.retrieve(idProduto) == nullptr) {
             return false;
         }
 
@@ -31,6 +31,6 @@ public:
     }
 
     Produto *buscarProduto(int idProduto) {
-        return daoManager.getProdutoDAO().findById(idProduto);
+        return daoManager.getProdutoDAO().retrieve(idProduto);
     }
 };
