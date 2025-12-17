@@ -22,7 +22,7 @@ public:
     }
 
     bool removerProduto(int idProduto) {
-        ClienteDAO &dao = daoManager.getClienteDAO();
+        ProdutoDAO &dao = daoManager.getProdutoDAO();
 
         // só remove se existir
         if (dao.recuperar(idProduto) == nullptr) {

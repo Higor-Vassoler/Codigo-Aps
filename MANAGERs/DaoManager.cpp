@@ -1,6 +1,6 @@
 #include "../DAOs/ClienteDAO.cpp"
 #include "../DAOs/ProdutoDAO.cpp"
-#include "../DAOs/VendedorDao.cpp"
+#include "../DAOs/VendedorDAO.cpp"
 
 using namespace std;
 
