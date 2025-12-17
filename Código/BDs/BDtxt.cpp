@@ -2,7 +2,10 @@
 #include <fstream>
 #include <string>
 #include "../Classes/enum/Categoria.cpp"
+<<<<<<< HEAD:Código/BDs/BDtxt.cpp
 #include "../Classes/enum/FormatoPagamento.cpp"
+=======
+>>>>>>> f1a7161 (Arrumei warning do BDtxt.cpp):BDs/BDtxt.cpp
 
 using namespace std;
 
