@@ -1,7 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "../Classes/Categoria.cpp"
+#include "../Classes/enum/Categoria.cpp"
+#include "../Classes/enum/FormatoPagamento.cpp"
 
 using namespace std;
 
@@ -42,7 +43,7 @@ void BDProduto(int *idProduto, string *nome, double *preco, double *custo, int *
     arquivo.close();
 }
 
-void BDVenda(int *idVenda, double *valorTotal, int *dataVencimento, int *dataVenda, bool *status, unsigned int *quantidadeVenda){
+void BDVenda(int *idVenda, double *valorTotal, int *dataVencimento, int *dataVenda, bool *status, unsigned int *quantidadeVenda, FormatoPagamento *formato){
     const string nomeArquivo = "Banco de Dados - Vendas.txt";
 
     ofstream arquivo(nomeArquivo, ios::out | ios::app); // ofstream = output file streams
@@ -51,6 +52,7 @@ void BDVenda(int *idVenda, double *valorTotal, int *dataVencimento, int *dataVen
             << *dataVencimento << ";"
             << *dataVenda << ";"
             << *status << ";"
-            << *quantidadeVenda << endl;
+            << *quantidadeVenda << ";"
+            << static_cast<int>(*formato) << endl;
     arquivo.close();
 }

@@ -14,9 +14,18 @@ class ClienteDAO {
         }
 
         // READ
-        Cliente *recuperar(int id) {
+        Cliente *recuperarPeloId(int id) {
             for (auto &c : clientes) {
                 if (c.getIdCliente() == id) {
+                    return &c;
+                }
+            }
+            return nullptr;
+        }
+
+        Cliente *recuperarPeloNome(string nome) {
+            for (auto &c : clientes) {
+                if (c.getNome() == nome) {
                     return &c;
                 }
             }
