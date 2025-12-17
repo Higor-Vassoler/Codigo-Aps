@@ -2,6 +2,7 @@ using namespace std;
 
 class ItemVenda{
     private:
+        int idItemVenda;
         unsigned int quantidade;
         double preco;
         double subtotal;
@@ -12,13 +13,22 @@ class ItemVenda{
     public:
         ItemVenda() = default;
 
-        ItemVenda(unsigned int quantidade, double preco, double subtotal, double valorDeconto, double custo, double lucro){
+        ItemVenda(int idItemVenda, unsigned int quantidade, double preco, double subtotal, double valorDeconto, double custo, double lucro){
+            this -> idItemVenda = idItemVenda;
             this -> quantidade = quantidade;
             this -> preco = preco;
             this -> subtotal = subtotal;
             this -> valorDesconto = valorDesconto;
             this -> custo = custo;
             this -> lucro = lucro;
+        }
+
+        int getIdItemVenda(){
+            return idItemVenda;
+        }
+
+        void setIdItemVenda(int idItemVenda){
+            this -> idItemVenda = idItemVenda;
         }
 
         unsigned int getQuantidade(){

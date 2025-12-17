@@ -4,6 +4,7 @@ using namespace std;
 
 class Pagamento{
     private:
+        int idPagamento;
         double valor;
         int data;
         int parcelas;
@@ -12,11 +13,20 @@ class Pagamento{
     public:
         Pagamento() = default;
 
-        Pagamento(double valor, int data, int parcelas, FormatoPagamento formato){
+        Pagamento(int idPagamento, double valor, int data, int parcelas, FormatoPagamento formato){
+            this -> idPagamento = idPagamento;
             this -> valor = valor;
             this -> data = data;
             this -> parcelas = parcelas;
             this -> formato = formato;
+        }
+
+        int getIdPagamento(){
+            return idPagamento;
+        }
+
+        void setIdPagamento(int idPagamento){
+            this -> idPagamento = idPagamento;
         }
 
         double getValor(){
