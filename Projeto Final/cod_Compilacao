@@ -1,0 +1,12 @@
+no terminal:
+g++ -std=c++17 -I . \
+main.cpp \
+dao/*.cpp \
+dominio/*.cpp \
+infra/*.cpp \
+manager/servico/*.cpp \
+sistema/*.cpp \
+-o app
+
+dpois:
+./app
